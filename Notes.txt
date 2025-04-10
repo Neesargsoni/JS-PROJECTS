@@ -1,0 +1,4 @@
+fetch is a method to access API's and it has two parts : one URl and second Option - either GET or POST
+When we need to get data in JSON format then it returns a promise.
+We can also send a data to a server using POST and we have to define content-type:JSON in headers and also to do JSON.stringify 
+to stringify the JS object.
