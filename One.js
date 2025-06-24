@@ -86,14 +86,26 @@ var rect = document.querySelector("#center");
 // .then(data => console.log(data))
 
 
-const num = Math.ceil(Math.random()*10);
-console.log(num)
+// const num = Math.ceil(Math.random()*10);
+// console.log(num)
 
-const gnum = prompt("Enter a number between 1 to 10");
+// const gnum = prompt("Enter a number between 1 to 10");
 
-if(gnum == num){
-    console.log('Matches')
-}
-else{
-    console.log("Not matched")
-}
+// if(gnum == num){
+//     console.log('Matches')
+// }
+// else{
+//     console.log("Not matched")
+// }
+const url = "https://random-data-api.com/api/cannabis/random_cannabis";
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error("Fetch error:", error));
+
